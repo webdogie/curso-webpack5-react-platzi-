@@ -1,0 +1,32 @@
+.Badge_list {
+}
+
+.Badge_list__item {
+  background: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.Badge_list__item--container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container__info p {
+  margin: 0;
+}
+
+.container__info--twitter {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* .container__info--twitter p {
+  margin: 0;
+} */
