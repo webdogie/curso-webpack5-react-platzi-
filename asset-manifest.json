@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react_platzi/static/css/main.8f068958.chunk.css",
-    "main.js": "/react_platzi/static/js/main.a54a88f5.chunk.js",
-    "main.js.map": "/react_platzi/static/js/main.a54a88f5.chunk.js.map",
+    "main.js": "/react_platzi/static/js/main.0dbc01d5.chunk.js",
+    "main.js.map": "/react_platzi/static/js/main.0dbc01d5.chunk.js.map",
     "runtime-main.js": "/react_platzi/static/js/runtime-main.be662180.js",
     "runtime-main.js.map": "/react_platzi/static/js/runtime-main.be662180.js.map",
     "static/css/2.ba27c2ca.chunk.css": "/react_platzi/static/css/2.ba27c2ca.chunk.css",
@@ -25,6 +25,6 @@
     "static/css/2.ba27c2ca.chunk.css",
     "static/js/2.33786ebd.chunk.js",
     "static/css/main.8f068958.chunk.css",
-    "static/js/main.a54a88f5.chunk.js"
+    "static/js/main.0dbc01d5.chunk.js"
   ]
 }
