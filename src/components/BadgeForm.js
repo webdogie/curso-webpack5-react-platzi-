@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class BadgeForm extends React.Component {
   // state = {};
@@ -79,10 +80,11 @@ class BadgeForm extends React.Component {
               value={this.props.formValues.twitter}
             />
           </div>
-
-          <button onClick={this.handleClick} className="btn btn-primary">
-            Save
-          </button>
+          <Link to="/badges">
+            <button onClick={this.handleClick} className="btn btn-primary">
+              Save
+            </button>
+          </Link>
         </form>
       </div>
     );
