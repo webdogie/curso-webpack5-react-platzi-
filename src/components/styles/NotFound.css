@@ -1,0 +1,11 @@
+.notFound_container {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #06be9f;
+}
+.notFound_container img {
+  max-width: 45vw;
+}

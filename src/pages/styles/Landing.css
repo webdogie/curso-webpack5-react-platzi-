@@ -1,0 +1,23 @@
+.landing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px);
+  background: url('../../images/stars.svg'), #1b1b25;
+  background-repeat: repeat;
+}
+
+.landing-container__info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.landing-container__info img {
+  width: 70%;
+}
+.hero_img {
+  width: 50%;
+  max-height: calc(100vh - 60px);
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Layout from '../components/Layout';
+import Landing from '../pages/Landing';
 import BadgeNew from '../pages/BadgeNew';
 import Badges from '../pages/Badges';
 import NotFound from '../components/NotFound';
@@ -12,9 +12,10 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route exact path="/badges" component={Badges} />
-        <Route exact path="/badges/new" component={BadgeNew} />
-        <Route component={NotFound} />
+        <Route path="/" exact component={Landing} />
+        <Route path="/badges" exact component={Badges} />
+        <Route path="/badges/new" exact component={BadgeNew} />
+        <Route path="/" component={NotFound} />
       </Switch>
     </BrowserRouter>
   );
