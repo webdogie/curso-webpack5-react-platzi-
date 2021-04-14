@@ -12,9 +12,9 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route path="/" exact component={Landing} />
-        <Route path="/badges" exact component={Badges} />
-        <Route path="/badges/new" exact component={BadgeNew} />
+        <Route path="/react_platzi" exact component={Landing} />
+        <Route path="/react_platzi/badges" exact component={Badges} />
+        <Route path="/react_platzi/badges/new" exact component={BadgeNew} />
         <Route path="/" component={NotFound} />
       </Switch>
     </BrowserRouter>

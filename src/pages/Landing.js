@@ -14,7 +14,7 @@ class Landing extends React.Component {
           <h1>PRINT YOUR BADGES</h1>
           <p>The easiest way to manage your conference</p>
           <div className="Badges__buttons">
-            <Link to="/badges/new" className="btn btn-primary">
+            <Link to="/react_platzi/badges/new" className="btn btn-primary">
               New Badge
             </Link>
           </div>

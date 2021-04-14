@@ -80,7 +80,7 @@ class BadgeForm extends React.Component {
               value={this.props.formValues.twitter}
             />
           </div>
-          <Link to="/badges">
+          <Link to="/react_platzi/badges">
             <button onClick={this.handleClick} className="btn btn-primary">
               Save
             </button>
