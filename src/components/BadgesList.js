@@ -20,23 +20,21 @@ class BadgesList extends React.Component {
           return (
             <li key={badge.id} className="Badge_list__item">
               <Link to="/react_platzi">
-                <a href="/">
-                  <div className="Badge_list__item--container">
-                    <div>
-                      <img src={badge.avatarUrl} alt="Avatar" />
-                    </div>
-                    <div className="container__info">
-                      <p>
-                        {badge.firstName} {badge.lastName}
-                      </p>
-                      <div className="container__info--twitter">
-                        <img src={twitterLogo} alt="twitterImg" width="20" />
-                        <p>@{badge.twitter}</p>
-                      </div>
-                      <p>{badge.jobTitle}</p>
-                    </div>
+                <div className="Badge_list__item--container">
+                  <div>
+                    <img src={badge.avatarUrl} alt="Avatar" />
                   </div>
-                </a>
+                  <div className="container__info">
+                    <p>
+                      {badge.firstName} {badge.lastName}
+                    </p>
+                    <div className="container__info--twitter">
+                      <img src={twitterLogo} alt="twitterImg" width="20" />
+                      <p>@{badge.twitter}</p>
+                    </div>
+                    <p>{badge.jobTitle}</p>
+                  </div>
+                </div>
               </Link>
             </li>
           );
