@@ -14,6 +14,17 @@ import twitterLogo from '../images/twitter.svg';
 
 class BadgesList extends React.Component {
   render() {
+    if (this.props.badges.length === 0) {
+      return (
+        <div>
+          <h3>No badges were found</h3>
+          <Link className="btn btn-primary" to="/react_platzi/badges/new">
+            Create new
+          </Link>
+        </div>
+      );
+    }
+
     return (
       <ul className="Badge_list list-unstyled">
         {this.props.badges.map((badge) => {

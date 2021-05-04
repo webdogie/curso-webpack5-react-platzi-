@@ -8,7 +8,7 @@ import conf_logo from '../images/conf-logo.svg';
 class Landing extends React.Component {
   render() {
     return (
-      <div class="landing-container">
+      <div className="landing-container">
         <div className="landing-container__info">
           <img src={conf_logo} alt="" />
           <h1>PRINT YOUR BADGES</h1>
