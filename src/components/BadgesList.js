@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Gravatar from './Gravatar';
 
 import './styles/BadgesList.css';
 import twitterLogo from '../images/twitter.svg';
@@ -33,7 +34,11 @@ class BadgesList extends React.Component {
               <Link to="/react_platzi">
                 <div className="Badge_list__item--container">
                   <div>
-                    <img src={badge.avatarUrl} alt="Avatar" />
+                    <Gravatar
+                      className="Badge__avatar-list"
+                      email={badge.email}
+                      alt="Avatar"
+                    />
                   </div>
                   <div className="container__info">
                     <p>

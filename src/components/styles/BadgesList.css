@@ -1,4 +1,6 @@
 .Badge_list {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .Badge_list__item {
