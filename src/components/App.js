@@ -5,6 +5,7 @@ import Landing from '../pages/Landing';
 import BadgeNew from '../pages/BadgeNew';
 import Badges from '../pages/Badges';
 import BadgeEdit from '../pages/BadgeEdit';
+import BadgeDetails from '../pages/BadgeDetails';
 import NotFound from '../components/NotFound';
 import Navbar from '../components/Navbar';
 
@@ -20,6 +21,11 @@ function App() {
           path="/react_platzi/badges/:badgeId/edit"
           exact
           component={BadgeEdit}
+        />
+        <Route
+          path="/react_platzi/badges/:badgeId"
+          exact
+          component={BadgeDetails}
         />
         <Route path="/" component={NotFound} />
       </Switch>
