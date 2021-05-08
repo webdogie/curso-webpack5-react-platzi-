@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import './styles/Badges.css';
 import confLogo from '../images/badge-header.svg';
 import BadgesList from '../components/BadgesList';
-import PageSkeletonLib from '../components/PageSkeletonLib';
+import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
-
+import MiniLoader from '../components/MiniLoader';
 import api from '../api';
 
 class Badges extends React.Component {
@@ -18,6 +18,12 @@ class Badges extends React.Component {
 
   componentDidMount() {
     this.fetchData();
+
+    this.intervalId = setInterval(this.fetchData, 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
   }
 
   fetchData = async () => {
@@ -32,8 +38,8 @@ class Badges extends React.Component {
   };
 
   render() {
-    if (this.state.loading) {
-      return <PageSkeletonLib />;
+    if (this.state.loading && !this.state.data) {
+      return <PageLoading />;
     }
 
     if (this.state.error) {
@@ -45,22 +51,25 @@ class Badges extends React.Component {
         <div className="Badges">
           <div className="Badges__hero">
             <div className="Badges__container">
-              <img src={confLogo} alt="" className="Badges_conf-logo" />
+              <img
+                className="Badges_conf-logo"
+                src={confLogo}
+                alt="Conf Logo"
+              />
             </div>
           </div>
         </div>
 
         <div className="Badges__container">
           <div className="Badges__buttons">
-            <Link to="/react_platzi/badges/new" className="btn btn-primary">
+            <Link to="/badges/new" className="btn btn-primary">
               New Badge
             </Link>
           </div>
-          <div className="Badges__list">
-            <div className="Badges__container">
-              <BadgesList badges={this.state.data} />
-            </div>
-          </div>
+
+          <BadgesList badges={this.state.data} />
+
+          {this.state.loading && <MiniLoader />}
         </div>
       </>
     );

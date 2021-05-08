@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from '../pages/Landing';
 import BadgeNew from '../pages/BadgeNew';
 import Badges from '../pages/Badges';
+import BadgeEdit from '../pages/BadgeEdit';
 import NotFound from '../components/NotFound';
 import Navbar from '../components/Navbar';
 
@@ -15,6 +16,11 @@ function App() {
         <Route path="/react_platzi" exact component={Landing} />
         <Route path="/react_platzi/badges" exact component={Badges} />
         <Route path="/react_platzi/badges/new" exact component={BadgeNew} />
+        <Route
+          path="/react_platzi/badges/:badgeId/edit"
+          exact
+          component={BadgeEdit}
+        />
         <Route path="/" component={NotFound} />
       </Switch>
     </BrowserRouter>

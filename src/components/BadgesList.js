@@ -1,16 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Gravatar from './Gravatar';
 
 import './styles/BadgesList.css';
-import twitterLogo from '../images/twitter.svg';
+import Gravatar from './Gravatar';
 
-{
-  /* <li key={badge.id}>
-  <p>
-    {badge.firstName} {badge.lastName}
-  </p>
-</li>; */
+class BadgesListItem extends React.Component {
+  render() {
+    return (
+      <div className="BadgesListItem">
+        <Gravatar
+          className="BadgesListItem__avatar"
+          email={this.props.badge.email}
+        />
+
+        <div>
+          <strong>
+            {this.props.badge.firstName} {this.props.badge.lastName}
+          </strong>
+          <br />@{this.props.badge.twitter}
+          <br />
+          {this.props.badge.jobTitle}
+        </div>
+      </div>
+    );
+  }
 }
 
 class BadgesList extends React.Component {
@@ -19,43 +32,30 @@ class BadgesList extends React.Component {
       return (
         <div>
           <h3>No badges were found</h3>
-          <Link className="btn btn-primary" to="/react_platzi/badges/new">
-            Create new
+          <Link className="btn btn-primary" to="/badges/new">
+            Create new badge
           </Link>
         </div>
       );
     }
 
     return (
-      <ul className="Badge_list list-unstyled">
-        {this.props.badges.map((badge) => {
-          return (
-            <li key={badge.id} className="Badge_list__item">
-              <Link to="/react_platzi">
-                <div className="Badge_list__item--container">
-                  <div>
-                    <Gravatar
-                      className="Badge__avatar-list"
-                      email={badge.email}
-                      alt="Avatar"
-                    />
-                  </div>
-                  <div className="container__info">
-                    <p>
-                      {badge.firstName} {badge.lastName}
-                    </p>
-                    <div className="container__info--twitter">
-                      <img src={twitterLogo} alt="twitterImg" width="20" />
-                      <p>@{badge.twitter}</p>
-                    </div>
-                    <p>{badge.jobTitle}</p>
-                  </div>
-                </div>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="BadgesList">
+        <ul className="list-unstyled">
+          {this.props.badges.map((badge) => {
+            return (
+              <li key={badge.id}>
+                <Link
+                  className="text-reset text-decoration-none"
+                  to={`/react_platzi/badges/${badge.id}/edit`}
+                >
+                  <BadgesListItem badge={badge} />
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     );
   }
 }
